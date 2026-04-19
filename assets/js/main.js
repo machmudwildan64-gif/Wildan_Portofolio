@@ -46,6 +46,18 @@
   });
 
   /**
+   * Preloader
+   */
+  const preloader = document.querySelector('#preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.style.transition = 'opacity 0.1s ease';
+      preloader.style.opacity = '0';
+      setTimeout(() => preloader.remove(), 100);
+    }, 50);
+  }
+
+  /**
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
@@ -71,13 +83,14 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
+      duration: 300,
+      easing: 'ease-out',
       once: true,
       mirror: false
     });
   }
-  window.addEventListener('load', aosInit);
+  aosInit();
+  document.addEventListener('DOMContentLoaded', aosInit);
 
   /**
    * Init typed.js
@@ -174,7 +187,7 @@
     });
   }
 
-  window.addEventListener("load", initSwiper);
+  document.addEventListener("DOMContentLoaded", initSwiper);
 
   /**
    * Correct scrolling position upon page load for URLs containing hash links.

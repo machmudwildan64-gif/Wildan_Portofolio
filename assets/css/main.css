@@ -1273,3 +1273,25 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* ===== FIX LOADING LAMBAT ===== */
+/* Pastikan konten langsung terlihat */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+[data-aos].aos-animate {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.hero, .about, #hero, #about, #resume, #portfolio, #services, #contact, #sertifikat {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+/* Percepat semua transisi */
+* {
+  transition-duration: 0.2s !important;
+}
+.typed-cursor {
+  transition-duration: unset !important;
+}
