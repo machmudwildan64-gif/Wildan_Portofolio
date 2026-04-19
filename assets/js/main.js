@@ -46,18 +46,6 @@
   });
 
   /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    setTimeout(() => {
-      preloader.style.transition = 'opacity 0.1s ease';
-      preloader.style.opacity = '0';
-      setTimeout(() => preloader.remove(), 100);
-    }, 50);
-  }
-
-  /**
    * Scroll top button
    */
   let scrollTop = document.querySelector('.scroll-top');
